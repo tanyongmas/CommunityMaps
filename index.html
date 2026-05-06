@@ -174,8 +174,6 @@
 
     .leaflet-popup-content-wrapper { border-radius: var(--radius-md) !important; box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important; border: 1px solid var(--border); }
     .leaflet-popup-content { font-family: 'Pridi', serif !important; margin: 15px !important; }
-    div:where(.swal2-container) div:where(.swal2-popup) { font-family: 'Pridi', serif !important; border-radius: var(--radius-md) !important; }
-    
     .btn-text { display: inline; }
 
     /* 🌟 จัดระเบียบการแสดงผลบนมือถือให้พอดีเป๊ะ */
@@ -225,35 +223,124 @@
       .nav-logo { height: 32px; }
       .btn-action { width: 36px; height: 36px; font-size: 1rem; }
     }
-    /* 🌟 ปรับแต่งปุ่ม SweetAlert ให้เรียงแนวตั้งแบบ Modern UI */
-    .vertical-actions-swal {
-      display: flex !important;
-      flex-direction: column !important;
-      gap: 12px;
-      width: 100%;
-      margin-top: 5px;
+    /* 🌟 SweetAlert2 Minimalist Theme */
+    .minimal-swal-popup {
+      border-radius: 16px !important;
+      padding: 2.5em 1.5em 2em !important;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+      border: 1px solid var(--border) !important;
     }
-    .vertical-actions-swal button.swal2-styled {
-      width: 90% !important;
-      margin: 0 auto !important;
-      padding: 12px 20px !important;
-      border-radius: var(--radius-sm) !important;
-      font-size: 1.05rem !important;
-      font-weight: 500 !important;
-      display: flex !important;
-      justify-content: center !important;
-      align-items: center !important;
-      gap: 12px !important;
+    
+    /* แต่งช่องใส่รหัสผ่าน */
+    .minimal-swal-input {
+      border: 1px solid #cbd5e1 !important;
+      border-radius: 8px !important;
+      padding: 12px 15px !important;
+      font-family: 'Pridi', serif !important;
+      font-size: 1rem !important;
+      text-align: center !important;
+      letter-spacing: 2px !important;
+      box-shadow: none !important;
+      width: 85% !important;
+      margin: 1.5em auto 0 !important;
+      background-color: #f8fafc !important;
+      color: var(--text-dark) !important;
       transition: 0.2s !important;
     }
-    .vertical-actions-swal button.swal2-cancel {
+    .minimal-swal-input:focus {
+      border-color: var(--primary) !important;
+      background-color: #ffffff !important;
+      box-shadow: 0 0 0 3px rgba(79, 111, 82, 0.15) !important;
+    }
+
+    /* แต่งปุ่มกดแนวตั้ง */
+    .minimal-swal-actions {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 12px !important;
+      width: 100% !important;
+      margin-top: 1.8em !important;
+    }
+    .minimal-swal-confirm, .minimal-swal-cancel {
+      width: 85% !important;
+      margin: 0 auto !important;
+      padding: 12px 15px !important;
+      border-radius: 8px !important;
+      font-family: 'Pridi', serif !important;
+      font-size: 1rem !important;
+      font-weight: 500 !important;
+      box-shadow: none !important;
+    }
+    .minimal-swal-cancel {
       background-color: #f1f5f9 !important;
       color: #64748b !important;
     }
-    .vertical-actions-swal button.swal2-cancel:hover {
+    .minimal-swal-cancel:hover {
       background-color: #e2e8f0 !important;
       color: #1e293b !important;
     }
+    /* 🌟 สไตล์เฉพาะสำหรับ Popup เครื่องมือวัด (Toolbox Style) */
+    .measure-swal-popup {
+      border-radius: 20px !important;
+      padding: 2em 1em !important;
+      border: 2px solid #e8f5e9 !important; /* ขอบเขียวอ่อนๆ */
+    }
+
+    .measure-swal-actions {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 10px !important;
+      width: 100% !important;
+      margin-top: 20px !important;
+    }
+
+    /* แต่งปุ่มเลือกเครื่องมือให้เหมือนรายการเมนู */
+    .measure-btn-choice {
+      width: 90% !important;
+      margin: 0 auto !important;
+      padding: 14px 20px !important;
+      border-radius: 12px !important;
+      font-family: 'Pridi', serif !important;
+      font-size: 1.05rem !important;
+      font-weight: 500 !important;
+      display: flex !important;
+      justify-content: flex-start !important; /* จัดไอคอนและข้อความชิดซ้าย */
+      align-items: center !important;
+      gap: 15px !important;
+      border: none !important;
+      transition: 0.2s !important;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05) !important;
+    }
+
+    .measure-btn-choice:hover {
+      transform: translateX(5px) !important; /* เลื่อนขวานิดๆ ตอนชี้ */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
+    }
+
+    /* ปุ่มยกเลิกของเครื่องมือวัด */
+    .measure-btn-cancel {
+      width: 90% !important;
+      margin: 10px auto 0 !important;
+      background-color: #f1f5f9 !important; /* พื้นหลังสีเทาอ่อน */
+      color: #64748b !important; /* ตัวหนังสือสีเทาเข้ม */
+      font-family: 'Pridi', serif !important;
+      font-size: 1rem !important;
+      font-weight: 500 !important;
+      padding: 12px 20px !important;
+      border-radius: 12px !important;
+      border: none !important;
+      text-decoration: none !important; /* เอาเส้นใต้ออก */
+      transition: 0.2s !important;
+      display: flex !important;
+      justify-content: center !important; /* จัดข้อความให้อยู่กึ่งกลาง */
+      align-items: center !important;
+    }
+
+    .measure-btn-cancel:hover {
+      background-color: #e2e8f0 !important; /* สีเทาเข้มขึ้นนิดนึงตอนเอาเมาส์ชี้ */
+      color: #1e293b !important;
+    }
+    
   </style>
 </head>
 <body>
@@ -669,19 +756,31 @@
         measureLayerGroup.clearLayers(); 
       } else {
         Swal.fire({
-          title: '<b style="color: var(--primary); font-size: 1.25rem;">เลือกเครื่องมือวัด</b>',
-          html: '<span style="color: var(--text-muted); font-size: 0.9rem;">คลิกเลือกรูปแบบที่ต้องการใช้งาน</span>',
-          width: '300px',         
-          padding: '1.5em 1em',   
+          html: `
+            <div style="text-align: center; margin-bottom: 10px;">
+              <div style="background: #e8f5e9; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+                <i class="fa-solid fa-ruler-combined" style="font-size: 1.8rem; color: var(--primary);"></i>
+              </div>
+              <div style="font-size: 1.3rem; font-weight: 600; color: var(--text-dark);">เครื่องมือวัด</div>
+              <div style="font-size: 0.9rem; color: var(--text-muted); margin-top: 5px;">เลือกรูปแบบที่ต้องการใช้งานบนแผนที่</div>
+            </div>
+          `,
+          width: '320px',
+          showConfirmButton: true,
           showDenyButton: true,
           showCancelButton: true,
-          confirmButtonText: '<i class="fa-solid fa-route" style="font-size:1.1rem;"></i> วัดระยะทาง',
-          denyButtonText: '<i class="fa-solid fa-draw-polygon" style="font-size:1.1rem;"></i> วัดพื้นที่',
+          // ใช้ confirm เป็นวัดระยะทาง, deny เป็นวัดพื้นที่
+          confirmButtonText: '<i class="fa-solid fa-route" style="color: #ffffff;"></i> วัดระยะทาง (เส้น)',
+          denyButtonText: '<i class="fa-solid fa-draw-polygon" style="color: #ffffff;"></i> วัดพื้นที่ (แปลง)',
           cancelButtonText: 'ปิดหน้าต่าง',
-          confirmButtonColor: 'var(--primary)', 
-          denyButtonColor: '#3b82f6', 
-          customClass: { 
-            actions: 'vertical-actions-swal' 
+          confirmButtonColor: 'var(--primary)', // สีเขียว
+          denyButtonColor: '#3b82f6',         // สีฟ้า
+          customClass: {
+            popup: 'measure-swal-popup',
+            actions: 'measure-swal-actions',
+            confirmButton: 'measure-btn-choice',
+            denyButton: 'measure-btn-choice',
+            cancelButton: 'measure-btn-cancel'
           }
         }).then((result) => {
           if (result.isConfirmed) {
@@ -757,30 +856,96 @@
       }
     });
 
-    let isAdmin = false;
+   // --- ส่วนของ Admin (ปรับแต่ง Popup มินิมอล & แก้ปุ่ม No) ---
+    let isAdmin = localStorage.getItem('isMapAdmin') === 'true';
+
+    if (isAdmin) {
+      map.addControl(drawControl);
+      const btn = document.getElementById('adminBtn');
+      btn.innerHTML = '<i class="fa-solid fa-right-from-bracket"></i> <span class="btn-text">ออกจากระบบ</span>';
+      btn.style.background = '#ef4444'; 
+    }
+
     document.getElementById('adminBtn').addEventListener('click', () => {
+      
+      // 🌟 กรณี: "เข้าสู่ระบบอยู่แล้ว" -> กดเพื่อออกจากระบบ
       if (isAdmin) { 
-        Swal.fire({ title: 'โหมดแอดมิน', text: 'คุณสามารถวาดแผนที่จากแถบเครื่องมือด้านซ้ายได้เลย', icon: 'info', confirmButtonColor: '#4F6F52' }); 
+        Swal.fire({
+          html: `
+            <div style="margin-bottom: 15px;">
+              <i class="fa-solid fa-circle-exclamation" style="font-size: 3.5rem; color: #ef4444;"></i>
+            </div>
+            <div style="font-size: 1.25rem; font-weight: 600; color: #1e293b; margin-bottom: 8px; line-height: 1.4;">ออกจากระบบ?</div>
+            <div style="font-size: 0.95rem; color: #64748b; line-height: 1.5;">เครื่องมือจัดการแผนที่จะถูกซ่อน<br>จนกว่าจะเข้าสู่ระบบใหม่</div>
+          `,
+          width: '320px',
+          showConfirmButton: true,
+          showCancelButton: true,
+          showDenyButton: false, // บังคับซ่อนปุ่ม No เด็ดขาด
+          confirmButtonText: 'ออกจากระบบ',
+          cancelButtonText: 'ยกเลิก',
+          confirmButtonColor: '#ef4444',
+          customClass: { 
+            popup: 'minimal-swal-popup',
+            actions: 'minimal-swal-actions',
+            confirmButton: 'minimal-swal-confirm',
+            cancelButton: 'minimal-swal-cancel'
+          }
+        }).then((result) => {
+          if (result.isConfirmed) {
+            isAdmin = false;
+            localStorage.removeItem('isMapAdmin');
+            map.removeControl(drawControl);
+            
+            const btn = document.getElementById('adminBtn');
+            btn.innerHTML = '<i class="fa-solid fa-user-shield"></i> <span class="btn-text">แอดมิน</span>'; 
+            btn.style.background = ''; 
+            
+            Swal.fire({ icon: 'success', title: 'ออกจากระบบแล้ว', timer: 1500, showConfirmButton: false, width: '280px', customClass: { popup: 'minimal-swal-popup' } });
+          }
+        });
         return; 
       }
       
+      // 🌟 กรณี: "ยังไม่ได้เข้าระบบ" -> กดเพื่อ Login
       Swal.fire({
-        title: 'ระบบจัดการแผนที่',
-        text: 'กรุณาใส่รหัสผ่านเพื่อเข้าสู่โหมดแอดมิน',
-        input: 'password', inputPlaceholder: 'รหัสผ่าน...',
-        showCancelButton: true, confirmButtonText: 'ตกลง', cancelButtonText: 'ยกเลิก',
-        confirmButtonColor: '#4F6F52', cancelButtonColor: '#94a3b8',
-        customClass: { confirmButton: 'btn-action', cancelButton: 'btn-action' }
+        html: `
+          <div style="margin-bottom: 15px;">
+            <i class="fa-solid fa-circle-user" style="font-size: 3.5rem; color: var(--primary);"></i>
+          </div>
+          <div style="font-size: 1.25rem; font-weight: 600; color: #1e293b; margin-bottom: 8px; line-height: 1.4;">เข้าสู่โหมดแอดมิน</div>
+          <div style="font-size: 0.95rem; color: #64748b; line-height: 1.5;">กรุณากรอกรหัสผ่าน<br>เพื่อจัดการข้อมูลแผนที่</div>
+        `,
+        input: 'password', 
+        inputPlaceholder: '••••••••',
+        width: '320px',
+        showConfirmButton: true,
+        showCancelButton: true, 
+        showDenyButton: false, // บังคับซ่อนปุ่ม No เด็ดขาด
+        confirmButtonText: 'เข้าสู่ระบบ', 
+        cancelButtonText: 'ยกเลิก',
+        confirmButtonColor: 'var(--primary)', 
+        customClass: { 
+          popup: 'minimal-swal-popup',
+          input: 'minimal-swal-input', 
+          actions: 'minimal-swal-actions',
+          confirmButton: 'minimal-swal-confirm',
+          cancelButton: 'minimal-swal-cancel'
+        }
       }).then((result) => {
         if (result.isConfirmed) {
           if (result.value === ADMIN_PASSWORD) {
-            isAdmin = true; map.addControl(drawControl); 
+            isAdmin = true; 
+            localStorage.setItem('isMapAdmin', 'true'); 
+            map.addControl(drawControl); 
+            
             const btn = document.getElementById('adminBtn');
-            btn.innerHTML = '<i class="fa-solid fa-user-shield"></i> <span class="btn-text">แอดมิน (แก้ไข)</span>'; 
-            btn.classList.add('active');
-            Swal.fire({ icon: 'success', title: 'เข้าสู่ระบบสำเร็จ', timer: 1500, showConfirmButton: false });
+            btn.innerHTML = '<i class="fa-solid fa-right-from-bracket"></i> <span class="btn-text">ออกจากระบบ</span>'; 
+            btn.style.background = '#ef4444';
+            
+            Swal.fire({ icon: 'success', title: 'เข้าสู่ระบบสำเร็จ', timer: 1500, showConfirmButton: false, width: '280px', customClass: { popup: 'minimal-swal-popup' } });
           } else { 
-            Swal.fire({ title: 'รหัสผ่านผิด!', icon: 'error', confirmButtonColor: '#ef4444' }); 
+            Swal.fire({ title: 'รหัสผ่านไม่ถูกต้อง', text: 'กรุณาลองใหม่อีกครั้ง', icon: 'error', confirmButtonColor: '#ef4444', width: '300px', customClass: { popup: 'minimal-swal-popup' } }); 
           }
         }
       });
